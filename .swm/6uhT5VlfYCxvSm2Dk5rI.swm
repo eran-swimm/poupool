@@ -1,0 +1,108 @@
+{
+    "id": "6uhT5VlfYCxvSm2Dk5rI",
+    "name": "How to make something configurable",
+    "dod": "",
+    "description": "Making things configurable is highly important when controlling swimming pools. As different swimming pools reside in different climates and consist of different materials, some of the relevant values may change between users.",
+    "summary": "",
+    "hunksOrder": [
+        "config.ini_0",
+        "controller/config.py_0",
+        "controller/swim.py_0",
+        "controller/swim.py_1"
+    ],
+    "tests": [],
+    "hints": [],
+    "play_mode": "walkthrough",
+    "swimmPatch": {
+        "config.ini": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/config.ini b/config.ini\nindex 10e401c..10e401c 100644\n--- a/config.ini\n+++ b/config.ini",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "Configuration values reside within `config.ini` in separate sections. For example - here, the section is `[wintering]`.",
+                            "Note that we add a comment for every value."
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -77,18 +77,3 @@",
+                        " hysteresis_down = 0.5\r",
+                        " hysteresis_up = 2.0\r",
+                        " \r",
+                        "-[wintering]\r",
+                        "-# Minimum duration in seconds between two stiring periods\r",
+                        "-period = 10800\r",
+                        "-# Only stir the pool if the air temperature is below this value\r",
+                        "-only_below = 5\r",
+                        "-# Speed of the pump for stiring\r",
+                        "-pump_speed = 1\r",
+                        "-# Duration in seconds of the stiring period\r",
+                        "-duration = 1800\r",
+                        "-# Minimum duration in seconds between two stiring periods\r",
+                        "-swim_period = 10800\r",
+                        "-# Only run the swimming pump if the inside temperature is below this value\r",
+                        "-swim_only_below = 0\r",
+                        "-# Duration in seconds that the swimming pump will run \r",
+                        "-swim_duration = 60"
+                    ]
+                }
+            ]
+        },
+        "controller/swim.py": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/controller/swim.py b/controller/swim.py\nindex 5296352..5296352 100644\n--- a/controller/swim.py\n+++ b/controller/swim.py",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "To use the value, we need to first import `config`"
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -24,2 +24,1 @@",
+                        " from .util import Timer\r",
+                        "-from .config import config\r"
+                    ]
+                },
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "We then access `config` with a list, where we pass the section (`\"wintering\"`) and the specific configuration value ('\"swim_period\"`)",
+                            "Don't forget to convert the value to the right type (e.g., `int`)."
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -30,7 +30,6 @@",
+                        " class Swim(PoupoolActor):\r",
+                        " \r",
+                        "     STATE_REFRESH_DELAY = 1  # faster refresh rate because speed can change\r",
+                        "-    WINTERING_PERIOD = int(config[\"wintering\", \"swim_period\"])\r",
+                        "     WINTERING_ONLY_BELOW = float(config[\"wintering\", \"swim_only_below\"])\r",
+                        "     WINTERING_DURATION = int(config[\"wintering\", \"swim_duration\"])\r",
+                        " \r"
+                    ]
+                }
+            ]
+        },
+        "controller/config.py": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/controller/config.py b/controller/config.py\nindex 86de36f..86de36f 100644\n--- a/controller/config.py\n+++ b/controller/config.py",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "The filename (`config.ini`) is defined within `config.py` and can change."
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -36,1 +36,0 @@",
+                        "-config = Config([\"config.ini\", \"config.ini.local\"])"
+                    ]
+                }
+            ]
+        }
+    },
+    "app_version": "0.3.3",
+    "file_version": "1.0.4"
+}
