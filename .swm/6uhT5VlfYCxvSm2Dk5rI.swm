@@ -68,12 +68,12 @@
                 {
                     "swimmHunkMetadata": {
                         "hunkComments": [
-                            "We then access `config` with a list, where we pass the section (`\"wintering\"`) and the specific configuration value ('\"swim_period\"`)",
+                            "We then access `config` with a list, where we pass the section (`\"wintering\"`) and the specific configuration value (`\"swim_period\"`)",
                             "Don't forget to convert the value to the right type (e.g., `int`)."
                         ]
                     },
                     "hunkDiffLines": [
-                        "@@ -30,7 +30,6 @@",
+                        "@@ -30,7 +29,6 @@",
                         " class Swim(PoupoolActor):\r",
                         " \r",
                         "     STATE_REFRESH_DELAY = 1  # faster refresh rate because speed can change\r",
