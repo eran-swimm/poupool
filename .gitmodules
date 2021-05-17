@@ -1,0 +1,3 @@
+[submodule "swimm-export"]
+	path = swimm-export
+	url = https://github.com/swimmio/swimm-export
