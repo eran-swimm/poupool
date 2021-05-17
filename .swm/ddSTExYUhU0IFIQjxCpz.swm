@@ -1,0 +1,32 @@
+{
+    "id": "ddSTExYUhU0IFIQjxCpz",
+    "name": "Test for submodules doc",
+    "content": [
+        {
+            "type": "text",
+            "text": "Test for submodules"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " # Tutorial Assets\r",
+                " \r",
+                "*These are just screenshots for the tutorial and can be remixed and reused under the terms of the MIT license, or [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - your choice. \r",
+                " "
+            ],
+            "firstLineNumber": 1,
+            "path": "swimm-export/assets/README.md",
+            "comments": [
+                "This works"
+            ]
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.4-2",
+        "file_blobs": {
+            "swimm-export/assets/README.md": ""
+        }
+    }
+}
