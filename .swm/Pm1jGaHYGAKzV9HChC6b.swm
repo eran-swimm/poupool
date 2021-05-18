@@ -1,0 +1,45 @@
+{
+    "id": "Pm1jGaHYGAKzV9HChC6b",
+    "name": "Exercise with git submodule",
+    "task": {
+        "dod": "Add a title to readme",
+        "tests": [],
+        "hints": [
+            "some hint for test"
+        ]
+    },
+    "content": [
+        {
+            "type": "text",
+            "text": "Interesting"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " ",
+                " Now, on to the tutorial (which is conveniently part of this repo as the README). I'm going to be using a demo project to illustrate this.",
+                " ",
+                "*## First Step: Enable Swimm Export & Explore The CLI",
+                "*",
+                " We have to enable exporting in order to work with it, so the first thing you need to do is ask your Lifeguard (the administrative user in Swimm) to navigate to any repository and click on the \"Integrations\" tab up top:",
+                " ",
+                " ![Integrations](assets/integrations.png \"Swimm's Integration Menu\")"
+            ],
+            "firstLineNumber": 6,
+            "path": "swimm-export/README.md",
+            "comments": []
+        },
+        {
+            "type": "text",
+            "text": ""
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.4-2",
+        "file_blobs": {
+            "swimm-export/README.md": ""
+        }
+    }
+}
